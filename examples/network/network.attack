@@ -1,4 +1,4 @@
-@start @slow
+@final @slow
 Feature: check to make sure the right ports are open on our server
  
   Background:
