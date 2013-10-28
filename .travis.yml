@@ -10,6 +10,8 @@ before_script:
   - 'cd vendor && wget http://downloads.sourceforge.net/project/dirb/dirb/2.03/dirb203.tar.gz && tar xvfz dirb203.tar.gz && cd dirb && ./configure && make && sudo cp dirb /usr/local/bin/ && cd ..'
   - export DIRB_WORDLISTS="/home/travis/build/gauntlt/gauntlt/vendor/dirb/wordlists"
   - 'cd vendor/railsgoat && bundle && rake db:setup && rails s'
+script:
+  - 'bundle && bundle exec gauntlt -t @final'
 notifications:
   irc:
     channels:
