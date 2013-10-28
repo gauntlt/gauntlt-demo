@@ -1,0 +1,3 @@
+[submodule "vendor/railsgoat"]
+	path = vendor/railsgoat
+	url = https://github.com/OWASP/railsgoat
