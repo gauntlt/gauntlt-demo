@@ -14,5 +14,3 @@ Bundler.with_clean_env do
   end
    
 end
-
-  ServiceManager.start
