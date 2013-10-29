@@ -1,3 +1,4 @@
+@final
 Feature: hello world with gauntlt using the generic command line attack
   Scenario:
     When I launch a "generic" attack with:
