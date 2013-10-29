@@ -5,5 +5,6 @@ gem 'arachni'
 gem 'service_manager'
 gem 'cucumber'
 gem 'aruba'
+gem 'rake'
 
 

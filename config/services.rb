@@ -1,3 +1,4 @@
+require 'service_manager'
 require 'bundler'
 
 Bundler.with_clean_env do
