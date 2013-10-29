@@ -1,5 +1,4 @@
 require 'bundler'
-require 'service_manager'
 
 Bundler.with_clean_env do
   Dir.chdir "./vendor/railsgoat" do 
