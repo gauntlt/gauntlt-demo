@@ -13,7 +13,7 @@ before_script:
   - export DIRB_WORDLISTS="/home/travis/build/gauntlt/gauntlt/vendor/dirb/wordlists"
 script:
   - 'pwd'
-  - 'bundle exec gauntlt -t @final'
+  - 'cd ./examples; bundle exec gauntlt'
 notifications:
   irc:
     channels:
