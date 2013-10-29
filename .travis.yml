@@ -4,7 +4,7 @@ rvm:
 before_install:
   - git submodule update --init --recursive
 before_script:
-  - 'bundle exec start_services'
+  - 'bundle exec start_services &'
   - sudo apt-get install nmap
   - sudo apt-get install wget
   - sudo apt-get install libcurl4-openssl-dev
