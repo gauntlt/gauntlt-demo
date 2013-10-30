@@ -1,22 +1,19 @@
-@slow
+@challenge @slow
 Feature: Run a Garmr scan on a single URL
 
 Scenario: Use Garmr to scan a website for basic security requirements
   Given "garmr" is installed
   And the following profile:
-    | name       | value                 |
-    | target_url | http://localhost:3000 |
+    | name       | value                              |
+    | target_url | http://localhost:3000              |
   When I launch a "garmr" attack with:
     """
     garmr -u <target_url> -o my_garmr_output.xml
     """
-  Then it should pass with:
-    """
-    [Garmr.corechecks.HttpsResourceOnHttpsLink] Pass
-    """
-#  And the file "my_garmr_output.xml" should contain XML:
-#    | css                               |
-#    | testcase[name="HTTPInlineJS"] failure |
-#  And the file "my_garmr_output.xml" should not contain XML:
-#    | css                               |
-#    | testcase[name="SCSPHeaderCheck"] failure |
+#  Then the file "my_garmr_output.xml" should not contain XML:
+#    | css                                            |
+#    | testcase[name="SomethingYouCareAbout"] failure |
+#
+#  You have to use css in the table to use the XML parsing step
+#
+#  Files are written out to /tmp/aruba and you should can see the file my_garmr_output.xml
