@@ -7,6 +7,7 @@ This is a demo set of attacks that can be used to demo gauntlt and learn how to 
 ```
 $ git clone https://github.com/gauntlt/gauntlt-demo
 $ cd ./gauntlt-demo
+$ git submodule update --init --recursive
 $ bundle
 ```
 ## Start targets
@@ -24,6 +25,6 @@ $ bundle exec start_services config/railsgoat.rb
 Once you have a target ready, you can start customizing attacks and testing them against the target.
 ```
 $ cd ./examples
-$ bundle exec gauntlt final_network.attack
+$ bundle exec gauntlt hello_world/hello_world.attack
 ```
 
