@@ -1,3 +1,6 @@
 [submodule "vendor/railsgoat"]
 	path = vendor/railsgoat
 	url = https://github.com/OWASP/railsgoat
+[submodule "vendor/Garmr"]
+	path = vendor/Garmr
+	url = https://github.com/mozilla/Garmr
