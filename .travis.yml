@@ -7,6 +7,7 @@ before_script:
   - sudo apt-get install nmap
   - sudo apt-get install wget
   - sudo apt-get install libcurl4-openssl-dev
+  - 'cd vendor/Garmr && sudo python setup.py install && cd ../..'
   - 'cd vendor && wget http://downloads.sourceforge.net/project/dirb/dirb/2.03/dirb203.tar.gz && tar xvfz dirb203.tar.gz && cd dirb && ./configure && make && sudo cp dirb /usr/local/bin/ && cd ../../'
   - export DIRB_WORDLISTS="/home/travis/build/gauntlt/gauntlt/vendor/dirb/wordlists"
 notifications:
