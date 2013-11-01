@@ -6,6 +6,8 @@ The challenge is to run garmr and parse the output.
 # Hints
 You need to have Garmr installed on your machine.  For your convenience, we have added the Garmr repo in our vendor directory. To install it, run:
 ```
+# On Ubuntu you might need this package
+$ sudo apt-get install python-setuptools
 $ cd vendor/Garmr && sudo python setup.py install && cd ../../
 ```
 Get started with Garmr to get familiar with the output
