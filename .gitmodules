@@ -4,3 +4,9 @@
 [submodule "vendor/Garmr"]
 	path = vendor/Garmr
 	url = https://github.com/mozilla/Garmr
+[submodule "vendor/sqlmap"]
+	path = vendor/sqlmap
+	url = https://github.com/sqlmapproject/sqlmap
+[submodule "vendor/sslyze"]
+	path = vendor/sslyze
+	url = https://github.com/iSECPartners/sslyze
