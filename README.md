@@ -20,6 +20,15 @@ You can also run the following to start individual targets which is still just r
 ```
 $ bundle exec start_services config/railsgoat.rb
 ```
+After you stop the service, you may have to kill the process manually.  
+
+For railsgoat, you can also just do the following:
+```
+$ cd vendor/railsgoat
+$ bundle install --binstubs
+$ rake db:setup
+$ rake server:start
+```
 
 ## Run a Gauntlt attack
 Once you have a target ready, you can start customizing attacks and testing them against the target.
