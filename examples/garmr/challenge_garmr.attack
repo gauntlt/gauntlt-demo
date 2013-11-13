@@ -16,4 +16,4 @@ Scenario: Use Garmr to scan a website for basic security requirements
 #
 #  You have to use css in the table to use the XML parsing step
 #
-#  Files are written out to /tmp/aruba and you should can see the file my_garmr_output.xml
+#  Files are written out to ./tmp/aruba and you should can see the file my_garmr_output.xml
