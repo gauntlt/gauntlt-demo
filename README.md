@@ -10,6 +10,7 @@ $ cd ./gauntlt-demo
 $ git submodule update --init --recursive
 $ bundle
 ```
+
 ## Start targets
 This includes railsgoat as a target to pratice against and in the future we will bundle other services.  To start the default services (which is just railsgoat right now) run the following.
 ```
