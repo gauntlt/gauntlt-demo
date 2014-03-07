@@ -1,4 +1,4 @@
-@slow @final
+@slow 
 Feature: Run sqlmap against a target and test any web forms on the page
   # See:
   #   https://github.com/sqlmapproject/sqlmap/wiki/Usage 
@@ -7,7 +7,7 @@ Scenario: Identify SQL injection vulnerabilities
   Given "sqlmap" is installed
   And the following profile:
     | name       | value                        |
-    | target_url | http://localhost:3000/login  |
+    | target_url | http://localhost:8008/login  |
   When I launch a "sqlmap" attack with:
     """
     python <sqlmap_path> -u <target_url> -v 1 --batch --forms --dbms sqlite -p email,password

@@ -6,7 +6,7 @@ You need to have arachni installed on your machine.  It is a ruby gem, so you wi
 
 Get started with arachni to get familiar with the output
 ```
-$ arachni --modules=xss --depth=1 --link-count=10 --auto-redundant=2 http://localhost:3000 
+$ arachni --modules=xss --depth=1 --link-count=10 --auto-redundant=2 http://localhost:8008 
 ```
 Once you feel good with working with the arachni output, check the `challenge_arachni-xss.attack` to get started. 
 

@@ -5,7 +5,7 @@ Scenario: Using arachni, look for cross site scripting and verify no issues are 
   Given "arachni" is installed
   And the following profile:
      | name                | value                          |
-     | url                 | http://localhost:3000          |
+     | url                 | http://localhost:8008          |
   When I launch an "arachni" attack with:
   """
   arachni --modules=xss --depth=1 --link-count=10 --auto-redundant=2 <url>

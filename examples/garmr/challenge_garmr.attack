@@ -5,7 +5,7 @@ Scenario: Use Garmr to scan a website for basic security requirements
   Given "garmr" is installed
   And the following profile:
     | name       | value                              |
-    | target_url | http://localhost:3000              |
+    | target_url | http://localhost:8008              |
   When I launch a "garmr" attack with:
     """
     garmr -u <target_url> -o my_garmr_output.xml

@@ -5,7 +5,7 @@ Scenario: Using arachni, look for cross site scripting and verify no issues are 
   Given "arachni" is installed
   And the following profile:
      | name                | value                          |
-     | url                 | http://localhost:3000          |
+     | url                 | http://localhost:8008          |
   When I launch an "arachni" attack with:
   """
   arachni --modules=xss --depth=1 --link-count=10 --auto-redundant=2 <url>
@@ -16,14 +16,14 @@ Scenario: Using arachni, look for cross site scripting and verify no issues are 
   Given "arachni" is installed
   And the following profile:
      | name                | value                          |
-     | url                 | http://localhost:3000          |
+     | url                 | http://localhost:8008          |
   When I launch an "arachni-simple_xss" attack
   Then the output should contain "0 issues were detected."
 
-Scenario: On the signup page, use arachni to look for cross site scripting and verify no issues are found
+Scenario: On the signup page, use arachni to look for cross site scripting and verify 2 issues are found
   Given "arachni" is installed
   And the following profile:
      | name                | value                          |
-     | url                 | http://localhost:3000/signup   |
+     | url                 | http://localhost:8008/signup   |
   When I launch an "arachni-full_xss" attack
-  Then the output should contain "0 issues were detected."
+  Then the output should contain "2 issues were detected."

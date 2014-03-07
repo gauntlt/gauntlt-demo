@@ -14,6 +14,6 @@ Feature: check to make sure the right ports are open on our server
       """
     Then the output should contain:
       """
-      3000
+      8008
       """
 

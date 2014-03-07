@@ -12,8 +12,8 @@ $ cd vendor/Garmr && sudo python setup.py install && cd ../../
 ```
 Get started with Garmr to get familiar with the output
 ```
-$ garmr -u http://localhost:3000 
-$ garmr -u http://localhost:3000 -o garmr-out.xml 
+$ garmr -u http://localhost:8008 
+$ garmr -u http://localhost:8008 -o garmr-out.xml 
 ```
 Once you feel good with working with the Garmr output, check the `challenge_garmr.attack` to get started. Since the app we are testing is vulnerable it might be a good idea to check for one of the lines that show 'Pass'
 
