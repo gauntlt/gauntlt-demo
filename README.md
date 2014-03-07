@@ -12,7 +12,7 @@ $ bundle
 ```
 
 ## Start targets
-This includes railsgoat as a target to pratice against and in the future we will bundle other services.  To start the default services (which is just railsgoat right now) run the following.
+This includes gruyere and railsgoat as a target to pratice against and in the future we will bundle other services.  To start the default services (which is just gruyere  right now) run the following.
 ```
 $ bundle exec start_services
 ```
@@ -20,6 +20,7 @@ $ bundle exec start_services
 You can also run the following to start individual targets which is still just railsgoat but more will be coming:
 ```
 $ bundle exec start_services config/railsgoat.rb
+$ bundle exec start_services config/gruyere.rb
 ```
 After you stop the service, you may have to kill the process manually.  
 
