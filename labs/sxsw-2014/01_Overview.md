@@ -4,9 +4,10 @@
 
 
 ### Setup
-There are two options for working through the workshop.  The recommended way is to use the virtual box image as there are a couple of security tools (arachni, nmap, ...) that we will be using.  It is not required for you to use it though and you can just clone the repo if you have ruby 1.9.3 and bundler.
+You have two options for completing the labs:
+* Use the pre-configured vagrant box as outlined in `02_Setup using Vagrant.md` (RECOMMENDED)
+* Run gauntlt natively as described in `03_Setup using Bundler.md`
 
+Using the vagrant box is the only option we will be able to support in the workshop. The box comes with a few security tools already installed. 
 
-If you want to use the vagrant box setup for the workshop, please follow the instructions in `00_Setup.md` and if you want to just use our own box, follow the directions in `03_Using Repo Only.md`
-
-This has been tested to work on linux and OS X.
+This has been tested to work on Linux and OS X.

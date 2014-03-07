@@ -1,6 +1,8 @@
 ## Hello World
 From the `gauntlt-demo` directory, run the following
 ```
+# This should be run from the top-level of `gauntlt-demo`
+# and not in labs/sxsw-2014
 $ bundle exec gauntlt ./examples/hello_world/hello_world.attack
 ```
 
@@ -10,7 +12,7 @@ If all succeeded, you should see the resulting output
 Feature: hello world with gauntlt using the generic command line attack
 
   Scenario:                                # ./examples/hello_world/hello_world.attack:3
-    When I launch a "generic" attack with: # gauntlt-1.0.6/lib/gauntlt/attack_adapters/generic.rb:1
+    When I launch a "generic" attack with: # gauntlt-1.0.8/lib/gauntlt/attack_adapters/generic.rb:1
       """
       cat /etc/passwd
       """
