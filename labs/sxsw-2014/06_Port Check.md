@@ -7,7 +7,7 @@ To get started with this, go to `examples/port_check` and open up `challenge_por
 Gauntlt uses profiles in setup steps to pass in values to the subsequent steps.  These profiles must start with the first line of `| name | value |` but after that you can assign names and values as you see fit.  Once we work with attack aliases we will see why that is important.
 
 ### Try the challenge
-Edit the `challenge_port-check.attack` and try to test to see if port 3000 is open.  You can run `$ bundle exec gauntlt challenge_port-check.attack` to see if your solution works. Check the README.md in `examples/port_check` for hints.
+Edit the `challenge_port-check.attack` and try to test to see if port 8008 is open.  You can run `$ bundle exec gauntlt challenge_port-check.attack` to see if your solution works. Check the README.md in `examples/port_check` for hints.
 
 ### Solution 
 The answer is in `final_port-check.attack` and you can compare it to your solution.  Run `$ bundle exec gauntlt final_port-check.attack` and you should see the following output:
@@ -29,7 +29,7 @@ Feature: check to make sure the right ports are open on our server
       """
     Then the output should contain:                 # aruba-0.5.3/lib/aruba/cucumber.rb:113
       """
-      3000
+      8008
       """
 
 1 scenario (1 passed)

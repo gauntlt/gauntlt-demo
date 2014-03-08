@@ -1,0 +1,17 @@
+@challenge @slow
+Feature: check to make sure only the expected ports are open on our server
+ 
+  Background:
+    Given "nmap" is installed
+    And the following profile:
+      | name       | value        |
+      | host       | localhost    |
+
+  Scenario: Verify server is open on expected ports
+    When I launch an "nmap" attack with:
+      """
+      nmap -F <host>
+      """
+#   Then ...
+# TODO: figure out to make sure that only the expected ports are open and no others
+# For hints consult the README.md contained in this directory

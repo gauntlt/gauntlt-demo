@@ -35,5 +35,3 @@ Feature: check to make sure the right ports are open on our server
 1 scenario (1 passed)
 5 steps (5 passed)
 ```
-
-

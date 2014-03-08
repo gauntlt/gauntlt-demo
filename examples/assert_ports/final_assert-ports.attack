@@ -1,0 +1,25 @@
+@final @slow
+Feature: check to make sure the right ports are open on our server
+ 
+  Background:
+    Given "nmap" is installed
+    And the following profile:
+      | name       | value        |
+      | host       | localhost    |
+
+  Scenario: Verify server is open on expected ports
+    When I launch an "nmap" attack with:
+      """
+      nmap -F <host>
+      """
+# Depending on whether you are running in the vagrant box or locally, 
+# this will look different
+# -------------------------------------------------------------------
+#    Then the output should match:
+#      """
+#      PORT\s+STATE\s+SERVICE
+#      8008/tcp\s+open\s+http
+#      443/tcp\s+open\s+https
+#
+#      Nmap done
+#      """
