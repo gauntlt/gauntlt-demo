@@ -116,6 +116,14 @@ def main():
   # empty path which redirects and /favicon.ico).
   #   (4) Automatically exit after 2 hours (7200 seconds) to mitigate against
   # accidentally leaving the server running.
+  #
+  # WARNING WARNING WARNING!!!
+  # 
+  # WARNING!  1, 2, and 3 have been removed for GAUNTLT testing and workshops
+  # We are assuming you have some sort of firewall on your machine and that you 
+  # are running this inside of the vagrant box 
+  # To use Gruyere for testing and other purposes, we recommend getting the 
+  # source from http://google-gruyere.appspot.com/
 
   quit_timer = threading.Timer(7200, lambda: _Exit('Timeout'))  # DO NOT CHANGE
   quit_timer.start()                                            # DO NOT CHANGE
@@ -143,10 +151,14 @@ def main():
   if insecure_mode:                                             # DO NOT CHANGE
     server_name = os.popen('hostname').read().replace('\n','')  # DO NOT CHANGE
   else:                                                         # DO NOT CHANGE
-    server_name = '127.0.0.1'                                   # DO NOT CHANGE
-  server_port = 8008                                            # DO NOT CHANGE
+  # Changed for GAUNTLT testing only! 
+  # Do not use this version of Gruyere outside of gauntlt workshop
+    server_name = '0.0.0.0'                                     # SHOULD BE 127.0.0.1
+    server_port = 8008                                          # DO NOT CHANGE
   global server_unique_id                                       # DO NOT CHANGE
-  server_unique_id = str(abs(hash(seed_value)))                 # DO NOT CHANGE
+  # Server changed for GAUNTLT testing only! 
+  # Do not use this version of Gruyere outside of gauntlt workshop
+  server_unique_id = str(12345)                                 # SHOULD BE RANDOM VALUE
 
   # END WARNING!
 
@@ -802,8 +814,10 @@ class GruyereRequestHandler(BaseHTTPRequestHandler):
     request_ip = self.client_address[0]                      # DO NOT CHANGE
     if request_ip not in allowed_ips:                        # DO NOT CHANGE
       print >>sys.stderr, (                                  # DO NOT CHANGE
+  # Changed for GAUNTLT testing only! 
+  # Do not use this version of Gruyere outside of gauntlt workshop
           'DANGER! Request from bad ip: ' + request_ip)      # DO NOT CHANGE
-      _Exit('bad_ip')                                        # DO NOT CHANGE
+      # _Exit('bad_ip')                                        # DO NOT CHANGE
 
     if (server_unique_id not in path                         # DO NOT CHANGE
         and path != '/favicon.ico'):                         # DO NOT CHANGE
@@ -813,8 +827,8 @@ class GruyereRequestHandler(BaseHTTPRequestHandler):
       else:                                                  # DO NOT CHANGE
         print >>sys.stderr, (                                # DO NOT CHANGE
             'DANGER! Request without unique id: ' + path)    # DO NOT CHANGE
-        # Changed for gauntlt, we need to be able request random URLs
-        # DO NOT USE THIS FOR NON-GAUNTLT TESTING
+   # Changed for gauntlt, we need to be able request random URLs
+   # DO NOT USE THIS FOR NON-GAUNTLT TESTING
         #_Exit('bad_id')                                     # DO NOT CHANGE
 
     path = path.replace('/' + server_unique_id, '', 1)       # DO NOT CHANGE

@@ -1,3 +1,16 @@
+DO NOT COPY THIS CODE OR USE THIS OUTSIDE OF THE GAUNTLT WORKSHOP
+
+WARNING! For educational and instructional purposes this code is included 
+with the gauntlt-demo as a target machine for gauntlt testing. Because we 
+are running Gruyere in a sandboxed environment, a few config settings were
+changed to make it function.  Please see gruyere.py comments for information.
+
+Gruyere with original configs can be found at http://google-gruyere.appspot.com/
+
+DO NOT COPY THIS CODE OR USE THIS OUTSIDE OF THE GAUNTLT WORKSHOP
+
+-------------------------------
+
 Gruyere - a web application with holes.
 
 Copyright 2010 Google Inc. All Rights Reserved.
