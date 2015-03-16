@@ -9,3 +9,6 @@ Check out the gauntlt wiki for a hint: [Using Cucumber Profiles and Environment 
 
 ### Solution 
 The answer is in `final_env-vars.attack` and you can compare it to your solution. 
+
+### Rate this workshop
+Can you please give us feedback at the official SXSW feedback form? http://bit.ly/prag-security-feedback

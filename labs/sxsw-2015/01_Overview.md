@@ -1,4 +1,4 @@
-## Rugged Software Using Rugged Driven Development - SXSW 2015
+## Pragmatic Security and Rugged DevOps Workshop - SXSW 2015
 
 ### Setup
 You have two options for completing the labs:
@@ -7,3 +7,8 @@ You have two options for completing the labs:
 
 Using the vagrant box is the only option we will be able to support in the workshop. The box comes with a few security tools already installed. 
 This has been tested to work on Linux and OS X.
+
+### Rate this workshop!
+It would be a big help to us if you could rate this workshop > http://bit.ly/prag-security-feedback
+
+This is the SXSW official feedback form.
