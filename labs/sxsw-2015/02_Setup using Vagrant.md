@@ -24,7 +24,7 @@ http://downloads.vagrantup.com/
 ### Set up a working directory
 ```
 $ cd ~/sxsw-2015
-$ vagrant box add sxsw-2015 ~/sxsw-2015/box/gauntlt-sxsw.box
+$ vagrant box add sxsw-2015 ~/sxsw-2015/box/gauntlt-sxsw-2015.box
 $ vagrant init sxsw-2015
 ```
 
