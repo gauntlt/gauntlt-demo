@@ -4,7 +4,9 @@ Feature: exploits vunerable sessions management logic at url
   Scenario: Url is exploited
   When I launch a "generic" attack with:
     """
-    python attack.py
+    /home/hacker/gauntlt-demo/examples/webgoat/vuln-03/attack.py
     """
-   
- Then the exit status should not be 1
+ Then the output should contain:
+   """
+   Attack Successful.
+   """

