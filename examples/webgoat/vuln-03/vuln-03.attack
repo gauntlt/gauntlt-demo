@@ -1,21 +1,10 @@
-@final
-Feature: confirms authentication with username and password sets secure cookie
-
-  Background:
-    Given "curl" is installed
-    And the following profile:
-      | name     | value      |
-      | hostname | http://localhost:8080/WebGoat/attack?Screen=187&menu=500 |
-
-  Scenario: Verify a Secure cookie is received
-  When I launch a "curl" attack with:
+@Final
+Feature: exploits vunerable sessions management logic at url
+  
+  Scenario: Url is exploited
+  When I launch a "generic" attack with:
     """
-    curl -X POST                                  \
-    --header "Content-Type: application/x-www-form-urlencoded; charset=UTF-8"		
-    --data "user2=Joe&pass2=banana&Submit=Submit" \
-    <hostname>
+    python attack.py
     """
    
- Then the following cookies should be received:
-    | name       | secure | _rest |
-    | Secure     |  true  | {}    |             
+ Then the exit status should not be 1
