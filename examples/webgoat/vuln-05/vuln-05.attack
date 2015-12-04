@@ -1,0 +1,11 @@
+Feature: hello world with gauntlt using the generic command line attack
+  Scenario:
+      When I launch a "generic" attack with:
+        """
+        vuln-05-runner
+        """
+      Then the output should contain:
+        """
+        Attack Successful
+        """
+
