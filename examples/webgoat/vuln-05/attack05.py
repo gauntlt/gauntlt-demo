@@ -18,7 +18,7 @@
 
 # --[ STEP 4 ]--
 # Submit the attack to the General => Http Basics page
-ATTACK=`echo -n "1"`
+#ATTACK=`echo -n "1"`
 
 # Purposefully fail for testing purposes
 #ATTACK=`echo -n "1"`
@@ -29,13 +29,14 @@ ATTACK=`echo -n "1"`
 # - 0 (error) if the vulnerability is present
 # - 1 (success) if the vulnerability is fixed (aka not present)
 
-if [ $ATTACK -eq 1 ]
-then
-    # Attack successful
-    echo "Attack Successful"
-    exit 1
-else
-    # Attack failed - no vuln-00 present
-    echo "vuln-00 not present"
-    exit 0
-f
+#if [ $ATTACK -eq 1 ]
+#then
+#    # Attack successful
+#    echo "Attack Successful"
+#    exit 1
+#else
+#    # Attack failed - no vuln-00 present
+#    echo "vuln-00 not present"
+#    exit 0
+#f
+print("Attack Successfull")

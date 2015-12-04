@@ -3,10 +3,23 @@ UT CS 361 Fall 2015
 
 Phishing login credentials by XSS
 
+
 Changes to Hacking Lab VM needed for testing:
-sudo apt-get install python3
+
+$ sudo apt-get install python3
+$ sudo apt-get install python3-requests
 
 
+The attack assumes the python file, attack05.py, is in directory
+~/casestudy/gauntlt-demo/examples/webgoat/vuln-05/
+
+and the script vuln-05-runner is in the path
+
+This can be confirmed with:
+$ sudo cp casestudy/gauntlt-demo/examples/webgoat/vuln-05/vuln-05-runner /usr/bin/
+$ sudo chmod 775 /usr/bin/vuln-00-runner 
+$ which vuln-05-runner
+/usr/bin/vuln-05-runner
 
 
 
