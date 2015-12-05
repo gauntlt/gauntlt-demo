@@ -6,7 +6,7 @@ Feature: exploits vunerable sessions management logic at url
     """
     /home/hacker/gauntlt-demo/examples/webgoat/vuln-03/attack.py
     """
- Then the output should contain:
+ Then the output should not contain:
    """
    Attack Successful.
    """
