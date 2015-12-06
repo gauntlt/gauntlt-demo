@@ -1,42 +1,27 @@
-TEST vuln-00.attack
+TEST vuln-16.attack
 
-This is a Gauntlt test to check if the vulnerability in WebGoat located at General => Http Basics (vuln-00) exists.
+This is a Gauntlt test to check if the vulnerability in WebGoat located at Injection Flaws => LAB: SQL Injection => Stage 3: Numeric SQL Injection (vuln-16) exists.
 
 It will return a
- - 1 (error) if the vulnerability is present
- - 0 (success) if the vulnerability is fixed (aka not present)
+ - FAIL (error) if the vulnerability is present
+ - PASS (success) if the vulnerability is fixed (aka not present)
 
 This test assumes 3 things:
 
-(1) That jerry-curl and jq are installed and available on the $PATH and uses the generic command-line attack.  To install these run the following command on Debian-based systems aka those using .deb packages.
+(1) That python and virtualenv are installed.  To install these run the following command on Debian-based systems aka those using .deb packages.
 
 ```
-$ sudo apt-get install owasp-wte-jerry-curl owasp-wte-jq
+$ sudo apt-get install python virtualenv
 ```
 
-This assumes you have the OWASP WTE repo setup on the computer running Gauntlt.  If not, it can be added with:
+(2) That gauntlt-demo is installed to the user's home directory (i.e. ~/gauntlt-demo)
+
+(3) That the user's home directory is /home/tyler/
+
+Testing vuln-16 can be done outside of Gauntlt by navigating to the webgoat/vuln-16 directory and running:
 
 ```
-$ sudo echo "deb http://appseclive.org/apt/14.04 trusty main" > /etc/apt/sources.list.d/owasp-wte.list
-$ sudo wget -q -O - http://appseclive.org/apt/owasp-wte.gpg.key | apt-key add -
+$ python vuln-16.py
 ```
 
-(2) The script ./webgoat/vuln-00/vuln-00-runner is in the path aka $PATH  This can be done & confirmed with:
-
-```
-$ sudo cp webgoat/vuln-00/vuln-00-runner /usr/bin/
-$ sudo chmod 775 /usr/bin/vuln-00-runner 
-$ which vuln-00-runner
-/usr/bin/vuln-00-runner
-```
-
-(3) There is a local proxy running on 127.0.0.1:8888
-
-Testing vuln-00 can be done outside of Gauntlt by navigating to the webgoat/vuln-00 directory and running:
-
-```
-$ ./exploit-vuln-00.bash
-```
-
-This Gauntlt test was written by Matt Tesauro (matt.tesauro@owasp.org) on Mon, 23 Nov 2015 22:43:10 -0600
-
+This Gauntlt test was written by Tyler O'Meara (Tyler@TylerOMeara.com) on Sat, 5 Dec 2015 20:36:00 -0600
