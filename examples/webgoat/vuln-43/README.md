@@ -1,6 +1,4 @@
 TEST vuln-43.attack
-TEST vuln-00.attack
-
 This is a Gauntlt test to check if the vulnerability in WebGoat located at Concurrency => Shopping Cart Concurrency Flaw (vuln-43) exists.
 
 It will return a
@@ -18,7 +16,7 @@ $ export PATH=$PATH:`pwd`
 $ chmod 755 vuln-43-runner
 ```
 
-(3) WebGoat is running on 127.0.0.1:8080/WebGoat/
+(3) WebGoat is running on http://127.0.0.1:8080/WebGoat/
 
 
 Testing vuln-43 can be done outside of Gauntlt by navigating to the webgoat/vuln-43 directory and running:
