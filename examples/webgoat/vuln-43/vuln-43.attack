@@ -1,0 +1,10 @@
+Feature: check for concurrency bug in WebGoat checkout
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python vuln-43-runner.py
+      """
+    Then the output should contain:
+      """
+      Exploit failed
+      """
