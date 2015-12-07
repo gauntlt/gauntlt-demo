@@ -1,8 +1,9 @@
 TEST vuln-43.attack
+
 This is a Gauntlt test to check if the vulnerability in WebGoat located at Concurrency => Shopping Cart Concurrency Flaw (vuln-43) exists.
 
 It will return a
- - 1 (error) if the vulnerability is present, or if an error occurred trying to exploit it
+ - 1 (error) if the vulnerability is present, or if an error occurred trying to access it
  - 0 (success) if the vulnerability is fixed (aka not present)
 
 This test assumes:
