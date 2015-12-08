@@ -1,0 +1,13 @@
+usernames = ("bob", "ted", "dylan", "rob", "jeff", "admin")
+a_user = "admin"
+colors = ("yellow", "red", "blue", "black", "purple", "green")
+a_color = "green"
+got_it = False
+for u in usernames:
+	if u is a_user:
+		for c in colors:
+			if c is a_color:
+				got_it = True
+				print (u+":", c)
+if not got_it:
+	print "none found"
