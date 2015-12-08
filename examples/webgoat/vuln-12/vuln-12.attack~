@@ -1,0 +1,11 @@
+Feature: Testing for numeric SQL Injection
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-12/sql_injection.attack
+      """
+    Then the output should contain:
+      """
+      False
+      """
+
