@@ -6,6 +6,6 @@ Feature: Parameter Tampering, Exploiting Hidden Fields
       """
     Then the output should contain:
       """
-      Attack Successful
+      Passed
       """
 
