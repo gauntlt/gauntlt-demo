@@ -1,0 +1,11 @@
+@final
+Feature: Blind Service SQL Injection. Attack designed to figure out a specific name tied to an account
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/Desktop/parse.py
+      """
+    Then the output should not contain:
+      """
+      Congratulations.
+      """
