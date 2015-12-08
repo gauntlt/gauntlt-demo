@@ -15,7 +15,7 @@ This test assumes 3 things:
 
 Testing vuln-30 can be done outside of Gauntlt by navigating to the webgoat/vuln-30 directory and running:
 
-$ python exploit-vuln-30.py
+`$ python exploit-vuln-30.py`
 
 (3) Gauntlt is installed
 
