@@ -8,8 +8,6 @@ It will return the following:
 
 **Note:** This vulnerability tests only a single user: Larry.
 
-This vulnerability logs in as a single user: Larry. 
-
 # Getting Started
 ## Setting up the Environment
 * This attack assumes you have a HL virtual machine. Start up the HL VM and launch a Root terminal. There are multiple terminals within the VM, so make sure that you're using the Root terminal.
