@@ -11,6 +11,8 @@ This test assumes 3 things:
 
 (1) The Python library Requests is installed
 
+`$ pip install requests`
+
 (2) There is a local proxy running on 127.0.0.1:8888
 
 Testing vuln-30 can be done outside of Gauntlt by navigating to the webgoat/vuln-30 directory and running:
