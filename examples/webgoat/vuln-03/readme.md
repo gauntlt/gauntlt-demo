@@ -1,16 +1,28 @@
-TEST vuln-03.attack
+#Authentication Flaws > Mutli Level Login 2
 
-This is a Gauntlt test to check if the vulnerability in WebGoat located at Authentication Flaws => Multi Level Login 2 (vuln-03) exists using (attack.py)
+This is a Gauntlt test to written to pass if the WebGoat vulnerability "Authenticat Flaws > Multi Level Login 2" cannot be exploited via the `hidden_user` POST parameter during authentication.
 
-It will return a
-1 (error) if the vulnerability is present
-0 (success) if the vulnerability is fixed
+Success: No vunerability
+Failure: Vunerability exploited
 
-requirements:
-(1) requests 
-$ sudo pip install requests
+Place this repo at `/home/hacker/` for out of the box functionality or edit the path in vuln-03.attack.
 
-(2) Webgoat is being running at 127.0.0.1:8080
+###Requirements:
 
-Testing vuln-03 can be done outside of Gauntlt by navigating to the webgoat/vuln-03 directory and running:
-$ ./attack.py
+#####[pip](https://github.com/pypa/pip) if necessary
+
+as root:
+
+`$ python get-pip.py`
+
+#####[requests](http://docs.python-requests.org/en/latest/)
+
+again in a root terminal:
+
+`pip install requests`
+
+#####[WebGoat](https://github.com/WebGoat/WebGoat) server at 127.0.0.1:8080
+
+
+
+
