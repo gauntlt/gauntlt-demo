@@ -19,6 +19,6 @@ response = s.get("http://127.0.0.1:8080/WebGoat/"+url)
 response = s.post("http://127.0.0.1:8080/WebGoat/"+url, data={'QTY': 1, 'Price': 1})
 
 if "Congratulations" in response.text:
-  print "Failed"
+  print "Attack Successful"
 else:
   print "Passed"
