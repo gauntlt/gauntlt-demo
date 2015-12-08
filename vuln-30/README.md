@@ -8,7 +8,7 @@ It will return a
 
 * 0 (success) if the vulnerability is fixed (aka not present)
 
-This test assumes 3 things:
+This test assumes 4 things:
 
 (1) The Python library Requests is installed
 
@@ -21,5 +21,9 @@ Testing vuln-30 can be done outside of Gauntlt by navigating to the webgoat/vuln
 `$ python exploit-vuln-30.py`
 
 (3) Gauntlt is installed
+
+(4) The files are all located in the path
+
+`/home/hacker/vuln-30/`
 
 This Gauntlt test was written by Hao-Hsiang Chi and Tarequl Alam from team Anthing Man on Tuesday, 8 Dec 2015
