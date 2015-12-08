@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Change the PWD to where the test files are located
+cd /home/hacker/gauntlt-demo/examples/webgoat/vuln-01
+
+# And then run the test script
+python ./attack2.py

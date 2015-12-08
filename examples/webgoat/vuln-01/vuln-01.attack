@@ -1,0 +1,10 @@
+Feature: Exploit the Path Based Access Control of Web-Goat  with gauntlt using Python
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      /home/hacker/gauntlt-demo/examples/webgoat/vuln-01/vuln-01-runner
+      """
+    Then the output should contain:
+      """
+      False
+      """
