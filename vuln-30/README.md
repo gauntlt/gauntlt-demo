@@ -5,6 +5,7 @@ This is a Gauntlt test to check if the vulnerability in WebGoat located at Param
 It will return a
 
 1 (error) if the vulnerability is present
+
 0 (success) if the vulnerability is fixed (aka not present)
 
 This test assumes 3 things:
