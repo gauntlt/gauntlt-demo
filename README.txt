@@ -1,4 +1,4 @@
-Vuln-22 Blind Service SQL Injection
+Vuln-22 Blind String SQL Injection
 
 Install WebGoat and Gauntlt through a root terminal using the command:
 
