@@ -1,5 +1,5 @@
 @final
-Feature: Blind Service SQL Injection. Attack designed to figure out a specific name tied to an account
+Feature: Blind String SQL Injection. Attack designed to figure out a specific name tied to an account
   Scenario:
     When I launch a "generic" attack with:
       """
