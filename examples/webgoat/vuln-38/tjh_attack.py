@@ -11,7 +11,7 @@ headers = headers = {
 payload = dict(username='guest', password='guest')
 s = requests.Session()
 s.get(url)
-r = s.post(url + "/j_spring_security_check;jsessionid=" + s.cookies.get('JSESSIONID'),data=payload, headers = headers)
+s.post(url + "/j_spring_security_check;jsessionid=" + s.cookies.get('JSESSIONID'),data=payload, headers = headers)
 r = s.get(url1)
 print r.content
 r1 = s.get(lessonURL) #contains screen# and menu# for attack URL
