@@ -47,6 +47,7 @@ $ gauntlt
 ```
 * To execute an attack on the WebGoat application to exploit the Stage 5: Reflected XSS vulnerability, simply run:
 ```
+$ cd /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-07
 $ python attack.py
 ```
 
