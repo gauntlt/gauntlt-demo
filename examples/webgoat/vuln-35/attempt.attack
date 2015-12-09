@@ -1,0 +1,11 @@
+@final
+Feature: hello world with gauntlt using the generic command line attack
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/vuln35/practice.py
+      """
+    Then the output should contain:
+      """
+      vulnerability does not exists
+      """
