@@ -1,0 +1,24 @@
+TEST Vuln-06.attack
+
+This is a Gauntlt test to check if the vulnerability in WebGoat located at General => Http Basics (vuln-00) exists.
+
+It will return a
+
+XSS Present (error) if the vulnerability is present
+No XSS Present (success) if the vulnerability is fixed (aka not present)
+
+
+This test assumes 3 things:
+
+(1) The script ./webgoat/vuln-06/Vuln-06.attack and ./webgoat/vuln-06/attack.py is in the correct path
+
+(2) There is a local proxy running on 127.0.0.1:8888
+
+(3) WebGoat is running on 127.0.0.1:8080
+
+Testing vuln-06 can be done outside of Gauntlt by navigating to the webgoat/vuln-06 directory and running:
+
+$ gauntlt
+
+
+This Gauntlt test was written by Grant Weston (grantweston76@gmail.com) and Charlina Hung (charlina.hung@gmail.com) on Wed, 9 Dec 2015
