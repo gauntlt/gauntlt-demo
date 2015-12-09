@@ -21,9 +21,10 @@ with requests.Session() as s:
     r = s.get(url + '/service/lessonmenu.mvc')
     r = s.get(url + '/attack?Screen=32&menu=5')
     r = s.get(url + '/service/lessonmenu.mvc')
-    xss_menu = list(filter(lambda menu_test: menu_test["name"] == "Cross-Site Scripting (XSS)", r.json))
+    broad_xss_menu = list(filter(lambda menu_test: menu_test["name"] == "Cross-Site Scripting (XSS)", r.json))
 
-    print(xss_menu)
+    my_entry = list(filter(lambda menu_test: menu_test["name"] == "Phishing with XSS", broad_xss_menu[0]['children']))
+    print(my_entry)
 #k    pprint.pprint(r[{name : 'Phishing with XSS'}])
 
 
