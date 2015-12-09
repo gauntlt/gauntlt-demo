@@ -10,7 +10,7 @@ No XSS Present (success) if the vulnerability is fixed (aka not present)
 
 This test assumes 3 things:
 
-(1) The script ./gauntlt-demo/XSS/Vuln-06.attack and ./gauntlt-demo/XSS/attack.py is in the correct path
+(1) The script ./webgoat/vuln-06/Vuln-06.attack and ./webgoat/vuln-06/attack.py is in the correct path
 
 (2) There is a local proxy running on 127.0.0.1:8888
 
