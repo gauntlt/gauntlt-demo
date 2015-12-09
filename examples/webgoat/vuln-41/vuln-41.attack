@@ -1,5 +1,10 @@
-Feature: silent transaction attack
-  Scenario: 
-    When I launch a "" attack with:
-      """
-      
+Feature: silent transaction attacks
+	Scenario: 
+		When I launch a "generic" attack with:
+			"""
+			python attack.py
+			"""
+		Then the output should contain:
+			"""
+			Attack Successful
+			"""
