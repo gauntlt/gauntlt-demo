@@ -15,17 +15,14 @@ This test assumes 5 things:
 ```
 $ sudo apt-get install python-setuptools
 ```
-
 3. The Python pip package is installed. To install this run the following command on Debian-based systems aka those using .deb packages.
 ```
 $ sudo easy_install pip
 ```
-
 4. The Python requests package is installed. To install this run the following command on Debian-based systems aka those using .deb packages.
 ```
 $ sudo pip install requests
 ```
-
 5. The Python BeautifulSoup4 package is installed. To install this run the following command on Debian-based systems aka those using .deb packages.
 ```
 $ sudo pip install beautifulsoup4
