@@ -5,6 +5,7 @@ This is a Gauntlt test to check if the vulnerability in WebGoat located at Cross
 It will return a
 
 > XSS Present (error) if the vulnerability is present
+>
 > No XSS Present (success) if the vulnerability is fixed (aka not present)
 
 
