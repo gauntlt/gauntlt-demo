@@ -3,7 +3,7 @@ Feature: hello world with gauntlt using the generic command line attack
   Scenario:
     When I launch a "generic" attack with:
       """
-      python /home/hacker/test-gauntlt/vuln-24-attack.py
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-24
       """
     Then the output should contain:
       """
