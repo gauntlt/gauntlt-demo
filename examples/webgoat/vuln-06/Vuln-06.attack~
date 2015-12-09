@@ -1,0 +1,12 @@
+@final
+Feature: hello world with gauntlt using the generic command line attack
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/test-gauntlt/gauntlt-demo/examples/webgoat/vuln-06vuln-06/attack.py
+
+      """
+    Then the output should contain:
+      """
+      No XSS Present
+      """
