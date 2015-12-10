@@ -1,4 +1,4 @@
-TEST vuln-41.attack
+##TEST vuln-41.attack
 
 This is a Gauntlt Test to check if the vulnerability in WebGoat located at AJAX Security  => Silent Transactions Attacks (vuln-41) exists.
 
@@ -42,3 +42,5 @@ It is written to pass when the vulnerability is fixed.
 ```
 $ python attack.py
 ``` 
+
+Inside the gauntlt attack file, the absolute path of the python script must be included, otherwise gauntlt won't be able to find the script.
