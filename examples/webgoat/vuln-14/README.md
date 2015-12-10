@@ -56,18 +56,3 @@ $ gauntlt
 $ cd /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-07
 $ python attack.py
 ```
-
-# Other Assumptions
-(1) That jerry-curl and jq are installed and available on the $PATH and uses the generic command-line attack.  To install these run the following command on Debian-based systems aka those using .deb packages.
-
-```
-$ sudo apt-get install owasp-wte-jerry-curl owasp-wte-jq
-```
-
-This assumes you have the OWASP WTE repo setup on the computer running Gauntlt.  If not, it can be added with:
-
-```
-$ sudo echo "deb http://appseclive.org/apt/14.04 trusty main" > /etc/apt/sources.list.d/owasp-wte.list
-$ sudo wget -q -O - http://appseclive.org/apt/owasp-wte.gpg.key | apt-key add -
-```
-
