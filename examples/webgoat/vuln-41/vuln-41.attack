@@ -2,9 +2,9 @@ Feature: silent transaction attacks
 	Scenario: 
 		When I launch a "generic" attack with:
 			"""
-			python attack.py
+			python cd /home/hacker/gauntlt-demo/examples/webgoat/vuln-41/attack.py
 			"""
 		Then the output should contain:
 			"""
-			Attack Successful
+			Attack Failed
 			"""
