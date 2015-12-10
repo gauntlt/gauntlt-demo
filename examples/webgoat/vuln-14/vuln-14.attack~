@@ -1,7 +1,0 @@
-Feature: vuln-14 attack with gauntlt
-Scenario:
-When I launch a "generic" attack with:
-"""
-python /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-14/jeff.py
-"""
-Then the exit status should be 0
