@@ -1,0 +1,3 @@
+sudo apt-get install xvfb
+gem install watir-webdriver
+gem install headless
