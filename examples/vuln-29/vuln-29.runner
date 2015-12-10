@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Change the PWD to where the test files are located
-cd /home/hacker/gauntlt-demo/examples/vuln-29
-
-# And then run the test script
-python vuln-29.py
