@@ -2,7 +2,7 @@ TEST vuln-32.attack
 
 This is a Gauntlt test to check if the vulnerability in WebGoat located at Web Services => WSDL Scanning (vuln-32) exists.
 
-The test will pass if the vulnerability is present, and fail otherwise.
+The test will pass if the vulnerability is not present, and fail otherwise.
 
 This test assumes the following:
 
