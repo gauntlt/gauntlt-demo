@@ -14,7 +14,7 @@ This test assumes 4 things:
 $ pip install requests
 ```
 
-(This pip command assumes that the user running it has permissions to write to the directory that pip is using. If there are permission errors, then it *can* be installed as root; however, **the authors do not vouch for anything in the pip package, and extreme caution should be taken when installing foreign packages as root**. If pip is not installed, it can be installed with
+(This pip command assumes that the user running it has permissions to write to the directory that pip is using. If there are permission errors, then it *can* be installed as root; however, **the authors do not vouch for anything in the requests library, and extreme caution should be taken when installing foreign libraries as root**.) If pip is not installed, it can be installed with
 
 ```
 $ sudo apt-get install python-pip
