@@ -15,8 +15,11 @@ It will return the following:
 $ curl -sSL http://bit.ly/1MJ3qNp | bash
 ```
 * Check to make sure WebGoat installed without problems. To do so, you can use WebGoat START to launch WebGoat. This can be found under Applications/Other/WebGoat START or under Applications/Hacking-Lab/WebGoat START.
-* Check that Gauntlt installed without problems. This can be done by following the steps in the image screenshots displayed below.
-![Step 1](http://res.cloudinary.com/dx4at2j5f/image/upload/v1449532665/CaseStudy/Step2.png)
+!(https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-Launch-WebGoat.png)
+* Check that Gauntlt installed without problems. 
+Launch a terminal (normal, not the root terminal) - the normal terminal is under Applications => Accessories => Terminal.  Make sure to source the rvm script so Gauntlt will be in your path or else the Gauntlt won't be in your path.
+!(https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-Source-rvm.png)
+Create a file called gauntlt-test.attack in the initial-test directory with the following contents:
 ![Step 2](http://res.cloudinary.com/dx4at2j5f/image/upload/v1449532707/CaseStudy/Step1.png)
 ![Step 3](http://res.cloudinary.com/dx4at2j5f/image/upload/v1449532665/CaseStudy/Step3.png)
 
