@@ -54,7 +54,7 @@ def logIn(username, wrongname):
     
 def attack():
     global vuln
-    for i in range(10):
+    for i in range(10): #TO SHORTCIRCUIT: Change 10 to 1
         # Begin two threads which log in with different usernames.
         a = threading.Thread(None, logIn, None, ('jeff', 'dave'))
         b = threading.Thread(None, logIn, None, ('dave', 'jeff'))
