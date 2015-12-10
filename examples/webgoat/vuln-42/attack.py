@@ -32,8 +32,6 @@ def vulnFound(text, wrongname):
     else:
         return False
 
-            
-
 def logIn(username, wrongname):
     global vuln
     # Create a session to maintain login state.
@@ -41,7 +39,7 @@ def logIn(username, wrongname):
     r = s.get('http://127.0.0.1:8080/WebGoat/start.mvc')
     r = s.get('http://127.0.0.1:8080/WebGoat/login.mvc')
     # Log in to be authenticated.
-    params = {'username':'guest', 'password':'guest'}
+    params = {'username':'webgoat', 'password':'webgoat'}
     r = s.post('http://127.0.0.1:8080/WebGoat/j_spring_security_check', params)
     r = s.get('http://127.0.0.1:8080/WebGoat/attack?Screen=42&menu=100')
     # Dynamically get the Screen and menu numbers.
@@ -56,15 +54,14 @@ def logIn(username, wrongname):
     
 def attack():
     global vuln
-    for i in range(10): # TO SHORTCIRCUIT: Change 10 to 1
+    for i in range(10):
         # Begin two threads which log in with different usernames.
         a = threading.Thread(None, logIn, None, ('jeff', 'dave'))
         b = threading.Thread(None, logIn, None, ('dave', 'jeff'))
         a.start()
         b.start()
-    # Exit with an error if vulnerability is found.
-    for i in range(10): # TO SHORTCIRCUIT: Change 10 to 1
         if vuln:
+            # Exit with an error if vulnerability is found.
             print "Vulnerability Found"
             exit(1)
         else:
@@ -72,7 +69,6 @@ def attack():
     # Exit 0 otherwise.
     print "No Vulnerability Found"
     exit(0)
-
-
+    
 
 attack()
