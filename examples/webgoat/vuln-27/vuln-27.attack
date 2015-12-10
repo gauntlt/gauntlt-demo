@@ -1,14 +1,9 @@
 Feature: Test for vuln-27, Bypass HTML Field Restrictions
 
-Background:
-  Given a directory named "../../" should exist
-  And I cd to "../../"
-  And a file named "vuln-27.py" should exist
-
 Scenario: Verify that the HTML field restrictions cannot be bypassed
   And I launch a "generic" attack with:
     """
-    python vuln-27.py
+    vuln-27.py
     """
   Then the output should contain:
     """

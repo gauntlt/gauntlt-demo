@@ -22,10 +22,11 @@ $ sudo apt-get install python-pip
 
 (2) WebGoat is running on http://127.0.0.1:8080/WebGoat/
 
-(3) The script examples/webgoat/vuln-27/vuln-27.py is in the path ($PATH). This can be done with the following command (while in the examples/webgoat/vuln-27 directory)
+(3) The script examples/webgoat/vuln-27/vuln-27.py is in the path ($PATH). One possible way to remidy this problem is to ensure that the python script is executable and then copy it into /usr/bin/.
 
 ```
-$ export PATH=$PATH:`pwd`
+$ chmod a+x vuln-27.py
+$ sudo cp vuln-27.py /usr/bin/
 ```
 
 Testing vuln-27 can be done outside of Gauntlt by navigating to the examples/webgoat/vuln-27/ directory and running:
