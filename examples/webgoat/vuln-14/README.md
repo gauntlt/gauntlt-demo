@@ -15,39 +15,43 @@ It will return the following:
 $ curl -sSL http://bit.ly/1MJ3qNp | bash
 ```
 * Check to make sure WebGoat installed without problems. To do so, you can use WebGoat START to launch WebGoat. This can be found under Applications/Other/WebGoat START or under Applications/Hacking-Lab/WebGoat START.
-!(https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-Launch-WebGoat.png)
+
+![Screen](https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-Launch-WebGoat.png)
 * Check that Gauntlt installed without problems. 
 Launch a terminal (normal, not the root terminal) - the normal terminal is under Applications => Accessories => Terminal.  Make sure to source the rvm script so Gauntlt will be in your path or else the Gauntlt won't be in your path.
-!(https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-Source-rvm.png)
-Create a file called gauntlt-test.attack in the initial-test directory with the following contents:
-![Step 2](http://res.cloudinary.com/dx4at2j5f/image/upload/v1449532707/CaseStudy/Step1.png)
-![Step 3](http://res.cloudinary.com/dx4at2j5f/image/upload/v1449532665/CaseStudy/Step3.png)
+![Screen 2](https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-Source-rvm.png)
+* Create a file called gauntlt-test.attack in the initial-test directory with the following contents:
+![Screen 3](https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-test-attack2.png)
+* Close the editor and run the attack like:
+![Screen 4](https://raw.githubusercontent.com/aseal134/gauntlt-demo/master/examples/webgoat/vuln-14/Screenshots/HL-gauntlt-test.png)
 
-When running the following command: 
+You now have an environment running WebGoat and Gauntlt.
+
+If you receive a "no such file or directory error when running the following command: 
 ```
 $ source .rvm/scripts/rvm
 ```
-There will be instances in which you will receive the following error: "no such file or directory". In this case, run the following four commands:
+You can remedy this by running the following commands:
 ```
 $ wget -O rvm.key http://pgp.key-server.io/download/0x3804BB82D39DC0E3
 $ gpg --import rvm.key
 $ curl -sSL https://get.rvm.io | bash -s stable --ruby
 $ source /home/hacker/.rvm/scripts/rvm && cd /home/hacker && gem install gauntlt
 ```
-Afterwards, check to make sure that Gauntlt has installed successfully using the above instructions.
+You can then go back and check that you have Gauntlt working on your machine.
 
 ##Executing the Attack
-* The attack script is written in Python and requires the following libraries: **requests**, **sys**, and **json**. Simply run the following commands to install these libraries.
+* The attack script is written in Python and requires **requests** and **json** libraries. To install these libraries, execute the following commands in your terminal:
 ```
 $ sudo pip install requests
 $ sudo pip install simplejson
 ```
-* Clone the REPO onto the Desktop for testing purposes.
-* To execute the gauntlt attack, simply run:
+* You may then clone the repository onto your Desktop for testing purposes.
+* To execute the gauntlt attack, execute the following command:
 ```
 $ gauntlt
 ```
-* To execute an attack on the WebGoat application to exploit the Stage 5: Reflected XSS vulnerability, simply run:
+* To execute the attack on the WebGoat application to exploit the Injection Flaws: XPATH injection vulnerability, execute the following:
 ```
 $ cd /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-07
 $ python attack.py
