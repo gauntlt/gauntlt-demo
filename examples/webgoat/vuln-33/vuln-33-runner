@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Change the PWD to where the test files are located
+cd ./examples/webgoat/vuln-33/
+
+# And then run the test script
+./exploit-vuln-33.bash
