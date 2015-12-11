@@ -1,0 +1,10 @@
+Feature: vuln-25 with gauntlt using the generic command line attack
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      /home/hacker/test-gauntlt/initial-test/vuln-25-runner
+      """
+    Then the output should contain:
+      """
+      vuln-25 not present
+      """
