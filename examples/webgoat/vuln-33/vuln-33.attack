@@ -1,0 +1,16 @@
+@final
+Feature: An SQL Injection attack with Gauntlt Webgoat Vuln. is broken, so I am returning user credit card numbers
+	Scenario:
+		When I launch a "generic" attack with:
+			"""
+			python /home/hacker/test-gauntlt/injection-test/sql-injection2.py
+			"""
+		Then the output should not contain:
+			"""
+			987654321
+			2234200065411
+			2435600002222
+			4352209902222
+			123456789
+			333498703333
+			"""
