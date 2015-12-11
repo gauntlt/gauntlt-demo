@@ -1,0 +1,15 @@
+@final
+Feature: Uploading a zipBomb with gauntlt using the python command line attack
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-23/exploit-vuln-23.py
+      """
+    Then the output should contain:
+      """
+      * File uploaded
+      """
+    Then the output should not contain:
+      """
+      * Congratulations
+      """
