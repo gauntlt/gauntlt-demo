@@ -8,7 +8,7 @@ It will return a
 
 ##This test assumes 3 things:
 
-###(1) Environment
+####(1) Environment
 
 - This test assumes the test is being run in HackingLab with Gauntlt and WebGoat on it. If not installed, via root terminal run:
 
@@ -37,7 +37,7 @@ $ pip install requests
 $ pip install json
 ```
 
-###(2) That the gauntlt/gauntlt-demo has been cloned
+####(2) That the gauntlt/gauntlt-demo has been cloned
 
 ```
 $ git clone https://github.com/gauntlt/gauntlt-demo.git
