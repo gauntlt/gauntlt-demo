@@ -6,5 +6,5 @@ Feature: Exploit the Path Based Access Control of Web-Goat  with gauntlt using P
       """
     Then the output should contain:
       """
-      False
+      Attack Failed, Vulnerability Not Present
       """
