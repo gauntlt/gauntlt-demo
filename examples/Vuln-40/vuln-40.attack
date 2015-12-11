@@ -1,0 +1,11 @@
+@final
+Feature: Attack using gauntlt to detect the presense of DOM-Based cross-site scripting in the WebGoat AJAX Security lab.
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      /home/hacker/gauntlt-demo/examples/Vuln-40/vuln-40.rb
+      """
+    Then the output should contain:
+      """
+      Safe
+      """
