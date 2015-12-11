@@ -18,10 +18,7 @@ for entry in range(len(third.json())):
        if third.json()[entry]['children'][child]['name'] == "Insecure Client Storage":
          attackurl += third.json()[entry]['children'][child]['link']
 
-
 fourth = session.get(attackurl)
-
-
 
 fifth = session.post(attackurl, purchase)
 if fifth.status_code == 200:
