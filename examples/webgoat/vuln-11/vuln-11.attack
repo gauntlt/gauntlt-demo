@@ -1,0 +1,11 @@
+@final
+Feature: command injection attack with commandline script
+  Scenario: 
+    When I launch a "generic" attack with: 
+      """
+      python /home/hacker/webgoat/vuln-11-runner.py
+      """
+    Then the output should contain: 
+      """
+      vuln-11 not present     
+      """
