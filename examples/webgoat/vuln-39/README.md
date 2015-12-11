@@ -45,7 +45,7 @@ $ git clone https://github.com/gauntlt/gauntlt-demo.git
 
 (3) There is a local proxy running on 127.0.0.1:8000
 
-Testing vuln-39 can be done by navigating to the webgoat/vuln-39 directory and running:
+Testing vuln-39 can be done by navigating to the gauntlt-demo/examples/webgoat/vuln-39 directory and running:
 
 ```
 $ gauntlt
