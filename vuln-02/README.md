@@ -7,7 +7,7 @@ It will return a
 
 This test assumes 3 things:
 
-1. That python and a few libraries are installed. This includes requests, re, json, and some system libraries installed with python. If any of these are missing, the pip installer can help with the installation process.
+* That python and a few libraries are installed. This includes requests, re, json, and some system libraries installed with python. If any of these are missing, the pip installer can help with the installation process.
 
 See https://pip.pypa.io/en/stable/installing/ for details about pip installation.
 
@@ -17,7 +17,7 @@ Following the installation of pip, install any missing packages with a command f
 pip install requests
 ```
 
-2. We also assume that you have Gauntlt running.  If not, the directions are on their site at http://gauntlt.org/.
+* We also assume that you have Gauntlt running.  If not, the directions are on their site at http://gauntlt.org/.
 
 The attack file vuln-02.attack needs to know the absolute path to the vuln-02.py file in order to run it successfully.
 There is a local proxy running on 127.0.0.1:8888 if you run the script with the -d flag.
@@ -27,7 +27,7 @@ You can also test the vulnerability with the python script outside of gauntlt by
 ```
 $ python vuln-02.py -d
 ```
-3. We lastly assume that you are using the Hacking Lab OS. The gauntlt demo was placed in the home directory of hacker. To run the python exploit script with gauntlt python script should be placed in the following location:
+* We lastly assume that you are using the Hacking Lab OS. The gauntlt demo was placed in the home directory of hacker. To run the python exploit script with gauntlt python script should be placed in the following location:
 ```
 /home/hacker/gauntlt-demo/vuln-02/vuln-02.py
 ```
