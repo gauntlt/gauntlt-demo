@@ -2,7 +2,7 @@ Feature: A SAX injection vulnerability in Webgoat with gauntlt
   Scenario:
     When I launch a "generic" attack with:
       """
-      python /home/hacker/test-gauntlt/examples/webgoat/vuln-34/exploit-vuln34.py
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-34/exploit-vuln34.py 
       """
     Then the output should contain:
       """
