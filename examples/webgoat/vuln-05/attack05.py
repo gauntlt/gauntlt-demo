@@ -44,7 +44,7 @@ with requests.Session() as s:
     r = s.get(url + '/service/lessonmenu.mvc')
 
     if "<script>" in str(injection_response.content):
-        print("injection successfull")
+        print("injection Successfull")
     
     r = s.get(url +'/catcher?PROPERTY=yes&user=foo&password=bar')
 
@@ -53,7 +53,7 @@ with requests.Session() as s:
     r = s.get(url+ attack_url)
 
     if "Congratulations" in str(r.content):
-        print("Phishing successfull")
+        print("Phishing Successfull")
         print("Attack Successfull")
 
 
