@@ -6,9 +6,9 @@ It will return a
  - Vulnerable: (error) if the vulnerability is present
  - No Vulnerability: (success) if the vulnerability is fixed (aka not present)
 
-This test assumes 3 things:
+##This test assumes 3 things:
 
-(1) Environment
+###(1) Environment
 
 - This test assumes the test is being run in HackingLab with Gauntlt and WebGoat on it. If not installed, via root terminal run:
 
@@ -37,13 +37,13 @@ $ pip install requests
 $ pip install json
 ```
 
-(2) That the gauntlt/gauntlt-demo has been cloned
+###(2) That the gauntlt/gauntlt-demo has been cloned
 
 ```
 $ git clone https://github.com/gauntlt/gauntlt-demo.git
 ```
 
-(3) There is a local proxy running on 127.0.0.1:8000
+## Running the Test
 
 Testing vuln-39 can be done by navigating to the gauntlt-demo/examples/webgoat/vuln-39 directory and running:
 
