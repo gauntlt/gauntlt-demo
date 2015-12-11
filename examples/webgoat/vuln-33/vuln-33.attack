@@ -3,7 +3,7 @@ Feature: hello world with gauntlt using the generic command line attack
   Scenario:
     When I launch a "generic" attack with:
       """
-      modifySQL-runner
+      vuln-33-runner
       """
     Then the output should not contain:
       """

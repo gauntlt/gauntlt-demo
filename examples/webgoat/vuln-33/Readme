@@ -1,4 +1,4 @@
-TEST modifySQL.attack
+TEST vuln-33.attack
 
 This is a Gauntlt test to check if the vulnerability in WebGoat located at Injection Flaws => Modify Data with SQL Injection exists.
 
@@ -15,15 +15,15 @@ $ sudo apt-get install python3
 
 This may or may not require an update of the python pip software.
 
-2) The script ./webgoat/modifySQL/modifySQL-runner is in the path aka $PATH This can be done and confirmed with:
+2) The script ./webgoat/vuln-33/vuln-33-runner is in the path aka $PATH This can be done and confirmed with:
 
-$ sudo cp webgoat/modifySQL/modifySQL-runner /usr/bin/
-$ sudo chmod 775 /usr/bin/modifySQL-runner 
-$ which modifySQL-runner
-/usr/bin/modifySQL-runner
+$ sudo cp webgoat/vuln-33/vuln-33-runner /usr/bin/
+$ sudo chmod 775 /usr/bin/vuln-33-runner 
+$ which vuln-33-runner
+/usr/bin/vuln-33-runner
 
 Testing this vulnerability can be done outside of Gauntlt by navigating to the webgoat/modifySQL directory and running 
 
-$ ./exploit-modifySQL.bash
+$ ./exploit-vuln-33.bash
 
 This Gauntlt test was written by Martin Estes and Animesh Gandhi on Fri, 11 Dec 2015
