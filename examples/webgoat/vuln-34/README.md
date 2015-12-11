@@ -8,14 +8,14 @@ It will return a
 
 This test assumes 2 things:
 
-(1) The python requests library is installed
+(1) The python requests library is installed.
+
 You can do this with pip
 ```
 $ pip install requests
 ```
 
-
-(3) There is a local proxy running on 127.0.0.1:8080
+(2) There is a local proxy running on 127.0.0.1:8080
 
 Testing vuln-34 can be done outside of Gauntlt by navigating to the webgoat/vuln-34 directory and running:
 
