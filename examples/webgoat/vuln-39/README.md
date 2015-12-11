@@ -42,6 +42,7 @@ $ pip install json
 ```
 $ git clone https://github.com/gauntlt/gauntlt-demo.git
 ```
+####(3) That WebGoat is running on a local proxy: 127.0.0.1:8888
 
 ## Running the Test
 
