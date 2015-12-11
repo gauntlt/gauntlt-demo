@@ -1,9 +1,50 @@
-Vulnerability-33, Web Services SQL Injection
+[![Build Status](https://travis-ci.org/gauntlt/gauntlt-demo.svg?branch=master)](https://travis-ci.org/gauntlt/gauntlt-demo)
 
-The python script uses the requests library, which needed to be installed. Before the requests library was installed however pip first needed to be installed. This was done in root terminal (Superuser) via: python get-pip.py Once pip was installed, the requests library was installed via root terminal using: pip install requests
+# Gauntlt Demo
+This is a demo set of attacks that can be used to demo gauntlt and learn how to implement it. Each directory in `./examples` contains a specific type of attack that you might want to run.  Inside each example you will find a README.md which will have a challenge and some hints on how to solve it.  We recommend reading that first and then try to create an attack to solve the challenge.
 
-The path of the Python script must be included in the attack file. The contents of the attack file include the following path: python /home/hacker/test-gauntlt/injection-test/sql-injection2.py
+## Installation
+```
+$ git clone https://github.com/secure-pipeline/gauntlt-demo
+$ cd ./gauntlt-demo
+$ git submodule update --init --recursive
+$ bundle
+```
 
-Once both the Python script and the attack file are in the same directory, use gauntlt vuln-33.attack to run.
+## Start targets
+This includes gruyere and railsgoat as a target to pratice against and in the future we will bundle other services.  To start the default targets run the following.
+```
+$ bundle exec start_services
 
-If an error occurs while running, repeat the install directions: source .rvm/scripts/rvm Then type: which gauntlt in order to ensure that gems is installed.
+# For some reason railsgoat doesnt exit cleanly from a Ctl-C with service manager so you 
+# will have to stop it manually
+# ps -ef | grep rails
+# kill -9 <PID>
+# Please send a pull request if you know how to fix this
+```
+
+You can also run the following to start individual targets which include: railsgoat and gruyere
+```
+$ bundle exec start_services config/railsgoat.rb
+$ bundle exec start_services config/gruyere.rb
+```
+After you stop the service, you may have to kill the process manually.  
+
+For railsgoat, you can also just do the following:
+```
+$ cd vendor/railsgoat
+$ bundle install --binstubs
+$ rake db:setup
+$ rake server:start
+```
+
+## Run a Gauntlt attack
+Once you have a target ready, you can start customizing attacks and testing them against the target.
+```
+$ cd ./examples
+$ bundle exec gauntlt hello_world/hello_world.attack
+```
+
+## Work through the examples
+You might find it helpful to head over to `./examples` and work through the examples.  After running `hello_world` it might be good to start with `port_check` 
+
