@@ -1,0 +1,5 @@
+# Change the PWD to where the attack files are located
+cd /home/hacker/gauntlt-demo/examples/webgoat/vuln-20/
+
+# And then run the test script
+python exploit-vuln-20.py

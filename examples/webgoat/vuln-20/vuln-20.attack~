@@ -1,0 +1,13 @@
+# To test only for the Database Backdoor (Stage 2) vulnerability
+# Simply change expected output "Vuln-20 Stage 2 Attack Unsuccessful"
+
+Feature: Attack with gauntlt using a python script to check for WebGoat vulnerability-20
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      vuln-20-runner
+      """
+    Then the output should contain:
+      """
+      Vuln-20 Stage 1 Attack Unsuccessful
+      """
