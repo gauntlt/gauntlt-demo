@@ -18,5 +18,6 @@ $ pip install requests
 (2) The clone is located home/hacker/ (the default directory you get when opening a terminal)
 
 Test written by Blake Henry and Misty Francis
+Team: SKT-T1
 
 
