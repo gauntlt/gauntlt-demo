@@ -21,7 +21,7 @@ $ sudo chmod 775 /usr/bin/vuln-05-runner
 $ which vuln-05-runner
 /usr/bin/vuln-05-runner
 
-Gauntlt will call the vuln-05-runner script which intern will run our python attack.
+Gauntlt will call the vuln-05-runner script which in turn will run our python attack.
 
 Goal of Attack
 This attack takes advantage of a Cross-Site Scripting (XSS) vulnerability 
