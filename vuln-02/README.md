@@ -19,8 +19,8 @@ pip install requests
 
 2. We also assume that you have Gauntlt running.  If not, the directions are on their site at http://gauntlt.org/.
 
-(2) The attack file vuln-02.attack needs to know the absolute path to the vuln-02.py file in order to run it successfully.
-(3) There is a local proxy running on 127.0.0.1:8888 if you run the script with the -d flag.
+The attack file vuln-02.attack needs to know the absolute path to the vuln-02.py file in order to run it successfully.
+There is a local proxy running on 127.0.0.1:8888 if you run the script with the -d flag.
 
 You can also test the vulnerability with the python script outside of gauntlt by navigating to the folder containing vuln-02.py and running the following command. If you use the -d flag it will use the proxy running at 127.0.0.1:8888
 
