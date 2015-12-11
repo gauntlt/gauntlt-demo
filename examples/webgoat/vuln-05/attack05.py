@@ -25,9 +25,6 @@ with requests.Session() as s:
     my_entry = list(filter(lambda menu_test: menu_test["name"] == "Phishing with XSS", broad_xss_menu[0]['children']))
     attack_url = "/" + my_entry[0]['link']
     
-    print(attack_url)
-
-
     r = s.get(url + '/service/lessontitle.mvc')
     r = s.get(url + '/service/cookie.mvc')
     r = s.get(url +'/service/lessonplan.mvc')
@@ -50,9 +47,6 @@ with requests.Session() as s:
         print("injection successfull")
     
     r = s.get(url +'/catcher?PROPERTY=yes&user=foo&password=bar')
-
-    # print(r.content)
-
 
     r = s.get(url + '/start.mvc?user=foo&pass=bar&login=login')
 
