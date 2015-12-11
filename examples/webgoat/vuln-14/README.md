@@ -53,6 +53,6 @@ $ gauntlt
 ```
 * To execute the attack on the WebGoat application to exploit the Injection Flaws: XPATH injection vulnerability, execute the following:
 ```
-$ cd /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-07
+$ cd /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-14
 $ python attack.py
 ```
