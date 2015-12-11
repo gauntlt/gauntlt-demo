@@ -1,0 +1,12 @@
+@final
+
+Feature: tests for vuln-42
+    Scenario:
+        When I launch a "generic" attack with: 
+            """
+            python /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-42/attack.py
+            """
+        Then the output should contain:
+            """
+            No Vulnerability Found
+            """
