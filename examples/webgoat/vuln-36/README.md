@@ -1,4 +1,4 @@
-#AJAX > XML Ijnection
+#AJAX > XML Injection
 
 This is a Gauntlt test to check if the vulnerability in WebGoat located at AJAX => XML Injection (vuln-36) exists.
 
