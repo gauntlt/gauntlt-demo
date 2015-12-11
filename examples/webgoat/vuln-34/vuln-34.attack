@@ -6,5 +6,5 @@ Feature: A SAX injection vulnerability in Webgoat with gauntlt
       """
     Then the output should contain:
       """
-      Vuln-34 Present
+      No Vulnerability 
       """
