@@ -6,19 +6,19 @@ It will return an error and "Attack Successful" if the vulnerability is present 
 
 This test assumes three things, that:
 
-1. The gauntlt-demo repo was cloned to /home/hacker/ with 
+- The gauntlt-demo repo was cloned to /home/hacker/ with 
 ```
 $ git clone https://github.com/gauntlt/gauntlt-demo.git
 ```
   from /home/hacker/
   
-2. That gauntlt is placed in the path using 
+- That gauntlt is placed in the path using 
 ```
 $ source .rvm/scripts/rvm
 ```
 from /home/hacker/ as well.
 
-3. That pip and the python Requests library are installed, by running the following in Terminal as root:
+- That pip and the python Requests library are installed, by running the following in Terminal as root:
 ```
 $ apt-get install python-pip
 $	pip install requests
