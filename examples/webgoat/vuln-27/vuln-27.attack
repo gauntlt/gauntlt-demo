@@ -1,0 +1,11 @@
+Feature: Test for vuln-27, Bypass HTML Field Restrictions
+
+Scenario: Verify that the HTML field restrictions cannot be bypassed
+  And I launch a "generic" attack with:
+    """
+    vuln-27.py
+    """
+  Then the output should contain:
+    """
+    The HTML field restrictions could not be bypassed
+    """
