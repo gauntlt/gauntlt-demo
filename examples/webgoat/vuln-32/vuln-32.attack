@@ -1,0 +1,10 @@
+Feature: determine if webgoat 6.0 is vulnerable to WSDL scanning
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/attackScripts/vuln-32.py
+      """
+    Then the output should not contain:
+      """
+      Found credit card number
+      """
