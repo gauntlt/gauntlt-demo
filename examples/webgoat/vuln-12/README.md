@@ -11,9 +11,9 @@ This test assumes 2 things:
 
 (1) That the requests library for python is installed as outlined in this guide: http://docs.python-requests.org/en/latest/user/install/#install
 
-'''
+```
 $ pip install requests
-'''
+```
 
 (2) The clone is located home/hacker/ (the default directory you get when opening a terminal)
 
