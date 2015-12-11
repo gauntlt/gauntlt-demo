@@ -1,0 +1,11 @@
+Feature: Parameter Tampering, Exploiting Hidden Fields
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      /home/hacker/gauntlt-demo/examples/webgoat/vuln-28/vuln-28-runner
+      """
+    Then the output should contain:
+      """
+      Passed
+      """
+
