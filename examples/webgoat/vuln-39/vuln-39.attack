@@ -1,0 +1,10 @@
+Feature: client side validation
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-39/vuln-39.py
+      """
+    Then the output should contain:
+      """
+      No Vulnerability
+      """
