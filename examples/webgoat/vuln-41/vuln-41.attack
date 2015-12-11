@@ -1,0 +1,10 @@
+Feature: silent transaction attacks
+	Scenario: 
+		When I launch a "generic" attack with:
+			"""
+			python /home/hacker/gauntlt-demo/examples/webgoat/vuln-41/attack.py
+			"""
+		Then the output should contain:
+			"""
+			Attack Failed
+			"""
