@@ -1,5 +1,8 @@
 Report by Alexandra Martinez and Jacob Walsh
+
 UT CS 361 Fall 2015
+
+Team: cs361_team
 
 Phishing login credentials by XSS
 
