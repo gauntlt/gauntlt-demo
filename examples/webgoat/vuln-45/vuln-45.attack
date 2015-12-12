@@ -1,0 +1,11 @@
+@final
+Feature: AJAX DOM Injection. Attack designed to activate a button without inputting a valid license key
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-45/vuln-45.py
+      """
+    Then the output should contain:
+      """
+      HACKED!
+      """
