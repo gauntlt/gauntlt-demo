@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Change the PWD to where the test files are located
+cd ~/gauntlt-demo/examples/webgoat/
+virtualenv vuln-16
+cd vuln-16
+. bin/activate
+pip install requests
+
+# And then run the test script
+python vuln-16.py
