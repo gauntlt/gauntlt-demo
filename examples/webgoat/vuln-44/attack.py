@@ -34,5 +34,5 @@ with requests.Session() as s:
                     if "Congratulations. You have successfully completed this lesson." in result.text:
                         print "Vulnerability present"
                     else:
-                        print "not present"
+                        print "Vulnerability not present"
 

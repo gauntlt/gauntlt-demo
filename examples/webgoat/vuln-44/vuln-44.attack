@@ -7,5 +7,5 @@ Feature: hello world with gauntlt using the generic command line attack
       """
     Then the output should contain:
       """
-      Vulnerability present
+      Vulnerability not present
       """
