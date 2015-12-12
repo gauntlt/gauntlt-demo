@@ -1,0 +1,11 @@
+Feature: generic attack.
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-26/vuln-26.attack
+      """
+    Then the output should contain:
+      """
+      The site is secure.
+      """
+
