@@ -1,6 +1,9 @@
 
 #Bling SQL Injection	-		Case Study 	
 TEST vuln-21.attack
+A.T.O.M.
+Patrizio Chiquini
+Omar Mahmud
 
 This is a Gauntlt test to check if the vulnerability in WebGoat 
 located at General => HTTP Basics (vuln-21) exists.
