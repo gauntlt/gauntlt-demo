@@ -25,3 +25,10 @@ $ which vuln-20-runner
 Testing vuln-20 can be done outside of Gauntlt by navigating to the webgoat/vuln-20 directory and running:
 
 $ python exploit-vuln-20.py
+
+This Gauntlt test was written by Jeannette Tang (jeannette.tang@utexas.edu) and Kelvin Nguyen (kelvinnguyen@utexas.edu) on Wed, December 9, 2015
+
+UT CS 361 Fall 2015
+Team: ABSA Potatoes
+WebGoat Vulnerability: Injection Flaws => Database Backdoor (vuln-20)
+Team Members: Jeannette Tang (jeannette.tang@utexas.edu) and Kelvin Nguyen (kelvinnguyen@utexas.edu)
