@@ -1,0 +1,11 @@
+@final
+Feature: hello world with gauntlt using the generic command line attack
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-17/attack.py
+      """
+    Then the output should contain:
+      """
+      Attack Unsuccessful
+      """
