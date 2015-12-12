@@ -1,0 +1,12 @@
+@final
+Feature: vuln-21 with gauntlt using the generic command line attack
+
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/vuln-21/attack.py
+      """
+    Then the output should contain:
+      """
+      vuln-21 is NOT present
+      """
