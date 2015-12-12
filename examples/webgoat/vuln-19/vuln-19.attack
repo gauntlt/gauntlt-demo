@@ -1,0 +1,10 @@
+Feature: Use SQL injection to inject data into the database of WebGoat with a Python script
+
+Scenario: Test for SQL data injection vulnerability.
+  When I launch a "generic" attack with:
+    """
+    python /home/hacker/gauntlt-demo/examples/webgoat/vuln-19/attack.py
+    """
+
+  Then the exit status should be 0
+    
