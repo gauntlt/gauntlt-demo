@@ -1,0 +1,12 @@
+@final
+Feature: using gauntlt to check for vulnerability 29 from webgoat
+  Scenario:
+    When I launch a "generic" attack with:
+      """
+      python /home/hacker/gauntlt-demo/examples/webgoat/vuln-29/vuln-29.py
+      """
+    Then the output should contain:
+      """
+      Vulnerability Found
+      """
+       
