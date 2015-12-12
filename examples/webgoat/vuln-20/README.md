@@ -10,8 +10,8 @@ This test assumes 3 things:
 
 (1) Requests library for python is installed. The simplest way to do this is to first install pip.
 
-$apt-get install python-pip
-$pip install requests
+$ sudo apt-get install python-pip
+$ sudo pip install requests
 
 (2) The script ./webgoat/vuln-20/vuln-20-runner is in the path aka $PATH This can be done & confirmed with:
 
