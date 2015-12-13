@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Change the PWD to where the test files are located
-cd /home/hacker/webgoat/vuln-00/
-
-# And then run the test script
-./exploit-vuln-00.bash
