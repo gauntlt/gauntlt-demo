@@ -1,8 +1,0 @@
-Feature: vul-07 attack with gauntlt
-  Scenario:
-    When I launch a "generic" attack with:
-      """
-      python /home/hacker/Desktop/gauntlt-demo/examples/webgoat/vuln-07/attack.py
-      """
-    Then the exit status should be 0
-      
